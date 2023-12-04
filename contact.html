@@ -38,41 +38,13 @@
                                 </div>
                                 <div class="tgmenu__navbar-wrap tgmenu__main-menu d-none d-xl-flex">
                                     <ul class="navigation">
-                                        <li class="menu-item-has-children"><a href="#">Home</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="index.html">Home One</a></li>
-                                                <li><a href="index-2.html">Home Two</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="about-us.html">ABOUT US</a></li>
-                                        <li class="menu-item-has-children"><a href="#">TOURNAMENT</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="tournament.html">TOURNAMENT</a></li>
-                                                <li><a href="tournament-details.html">TOURNAMENT Single</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="menu-item-has-children"><a href="#">PAGES</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="shop.html">Gaming Shop</a></li>
-                                                <li><a href="shop-details.html">Shop Details</a></li>
-                                                <li><a href="services.html">Our Services</a></li>
-                                                <li><a href="services-details.html">Services Details</a></li>
-                                                <li><a href="team-details.html">Player Details</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="menu-item-has-children"><a href="#">News</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="blog.html">Our Blog</a></li>
-                                                <li><a href="blog-details.html">Blog Details</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="active"><a href="contact.html">contact</a></li>
+                                        <li><a href="index.html">HOME</a></li>
+                                        <li><a href="tournament.html">LIVE</a></li>
+                                        <li><a href="#">contact</a></li>
                                     </ul>
                                 </div>
                                 <div class="tgmenu__action d-none d-md-block">
                                     <ul class="list-wrap">
-                                        <li class="search"><a href="#"><i class="flaticon-search-1"></i></a></li>
-                                        <li class="header-btn"><a href="contact.html" class="tg-border-btn"><i class="flaticon-edit"></i> ~sing in</a></li>
                                         <li class="side-toggle-icon">
                                             <span></span>
                                             <span></span>
@@ -221,7 +193,7 @@
                     <div class="col-lg-6 col-md-10">
                         <div class="contact__content">
                             <h2 class="overlay-title"><span>join us</span></h2>
-                            <h2 class="title">CONTACT US AND FIND YOUR mykd</h2>
+                            <h2 class="title">CONTACT US AND FIND YOUR Just Lunatiks</h2>
                             <p>Axcepteur sint occaecat atat non proident, sunt culpa officia deserunt mollit anim id est labor umLor emdolor</p>
                             <div class="footer-el-widget">
                                 <h4 class="title">information</h4>
@@ -235,25 +207,50 @@
                     </div>
                     <div class="col-lg-6 col-md-10">
                         <div class="contact__form-wrap">
-                            <form id="contact-form" action="assets/mail.php" method="POST">
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <div class="input-grp">
-                                            <input name="name" type="text" placeholder="Name *" required="">
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="input-grp">
-                                            <input name="email" type="email" placeholder="Email *" required="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="input-grp message-grp">
-                                    <textarea name="message" cols="30" rows="10" placeholder="Enter your message"></textarea>
-                                </div>
-                                <button class="submit-btn">Submit Now</button>
-                            </form>
-                            <p class="ajax-response"></p>
+                            <form id="contact-form"
+      action="https://formspree.io/f/mwkdqzgr"
+      method="post" novalidate="novalidate">
+      <input type="hidden" name="Website Origin" value="Just Lunatiks">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="input-grp">
+                <input name="Name" type="text" placeholder="Name *" required="">
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="input-grp">
+                <input name="Email" type="email" placeholder="Email *" required="">
+            </div>
+        </div>
+    </div>
+    <div class="input-grp message-grp">
+        <textarea name="Message" cols="30" rows="10" placeholder="Enter your message"></textarea>
+    </div>
+    <a href="#" class="btn" onclick="submitForm();">
+        <span>Send Message</span>
+    </a>
+</form>
+<p class="ajax-response"></p>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+    function submitForm() {
+        $.ajax({
+            url: 'https://formspree.io/f/mwkdqzgr',
+            method: 'POST',
+            data: $('#contact-form').serialize(),
+            dataType: 'json',
+            success: function(response) {
+                $('.ajax-response').html('Message sent successfully');
+            },
+            error: function(error) {
+                $('.ajax-response').html('Error sending message');
+            }
+        });
+        return false; // Prevent the default form submission
+    }
+</script>
+
                         </div>
                     </div>
                 </div>
@@ -263,7 +260,7 @@
 
         <!-- contact-map -->
         <div class="contact-map">
-            <iframe src="https://geo-devrel-javascript-samples.web.app/samples/style-array/app/dist/" allowfullscreen="" loading="lazy"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d231262.26464295408!2d72.71637333457338!3d19.082177512678562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!5e1!3m2!1sen!2sin!4v1701694219278!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
         </div>
         <!-- contact-map-end -->
 
