@@ -1,1 +1,1 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/dcf10acf-143a-4117-b756-15417f22015e/deploy-status)](https://app.netlify.com/sites/justlunatikss/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/dcf10acf-143a-4117-b756-15417f22015e/deploy-status)](https://app.netlify.com/sites/justlunatiks/deploys)
